@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+
+.App {
+  text-align: center;
+}
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+}
+
+html, body {
+  margin: 0;
+  padding: 1em;
+  
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.6;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+hr {
+  margin: 3rem 0 2rem;
+  border: 0;
+  border-top: 1px solid #E0E4E8;
+}
+
+h1 {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: #648ebb;
+}
+
+
+/* Button */
+.btn {
+  margin: 0;
+  padding: 1em 2em;
+  
+  line-height: 1;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #50AAFF;
+  border: 0;
+  font-weight: bold;
+}
+
+.btn--inline {
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.btn--close {
+  background: #ff8282;
+}
+
+
+/* Dialog */
+.dialog {
+  width: 90vw;
+  max-width: 20rem;
+  
+  padding: 1em;
+  
+  background: #fff;
+  color: #656e77;
+  box-shadow: 0 0 5px rgba(101, 110, 119, .2);
+  border: 0;
+  text-align: center;
+}
+
+.dialog[open] {
+  animation: .2s linear slidein;
+}
+
+.dialog::backdrop {
+  background: rgba(224, 228, 232, .9);
+  animation: .4s ease fade;
+}
+
+.dialog__title {
+  color: #50AAFF;
+}
+
+.dialog__txt {}
+
+.dialog__btn {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+
+@keyframes slidein {
+  from {
+      transform: translate3d(0, 5px, 0);
+  }
+  to {
+      transfrom: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: .3;
+  }
+  to {
+      opacity: 1;
+  }
+}
